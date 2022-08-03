@@ -7,8 +7,15 @@ def delay_decorator(function):
         function()
     return wrapper_function()
 
+@delay_decorator
 def say_hello():
     print("Hello!")
 
+@delay_decorator
+def say_bye():
+    print("Goodbye!")
 
-inner_function = delay_decorator(say_hello)
+def say_greeting():
+    print("How are you?")
+
+inner_function = delay_decorator(say_greeting)
